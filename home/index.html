@@ -1,27 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR"> <!-- # Define o idioma da página -->
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" /> <!-- # Suporte a caracteres especiais -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- # Responsividade em dispositivos móveis -->
-  <title>Prazer</title> <!-- # Título da aba do navegador -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prazer</title>
 
-  <!-- # Fontes importadas do Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" /> <!-- # Link para o arquivo CSS externo -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header> <!-- # Cabeçalho do site -->
-    <nav> <!-- # Menu de navegação -->
-      <a href="index.html" class="ativo">WORK</a> <!-- # Link ativo com destaque -->
-      <a href="../contato/contato.html">CONTATO</a> <!-- # Link para página de contato -->
+  <header>
+    <nav>
+      <a href="index.html" class="ativo">WORK</a>
+      <a href="../contato/contato.html">CONTATO</a>
     </nav>
   </header>
 
-  <main> <!-- # Conteúdo principal da página -->
-    <h1>Prazer, Flyaway</h1> <!-- # Título principal -->
-    <p>18 ANOS. VIDEO EDITOR. TRABALHEI COM: </p> <!-- # Descrição -->
-    <div class="arrow">⌄</div> <!-- # Seta indicando que há mais conteúdo -->
+  <main>
+    <h1>Prazer, Flyaway</h1>
+    <p>18 ANOS. VIDEO EDITOR. TRABALHEI COM: </p>
+
+    <button class="arrow" aria-label="Scroll para portfolio">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <polyline points="19 12 12 19 5 12"></polyline>
+      </svg>
+    </button>
   </main>
+
+  <section id="portfolio">
+    <div class="image-grid">
+      <div class="image-slot" id="slot1">
+        <img src="https://cdn.filtergrade.com/wp-content/uploads/2024/05/29145105/Chrome12-scaled.jpg" alt="Imagem do Portfolio" />
+      </div>
+      <div class="image-slot"></div>
+      <div class="image-slot"></div>
+      <div class="image-slot"></div>
+      <div class="image-slot"></div>
+      <div class="image-slot"></div>
+      <div class="image-slot"></div>
+      <div class="image-slot"></div>
+      <div class="image-slot"></div>
+      <div class="image-slot"></div>
+      <div class="image-slot"></div>
+      <div class="image-slot"></div>
+    </div>
+
+    <div class="bottom-images">
+      <div class="bottom-image-slot"></div>
+      <div class="bottom-image-slot"></div>
+    </div>
+  </section>
+
+  <!-- Modal da imagem -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" />
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

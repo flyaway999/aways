@@ -1,53 +1,54 @@
+/* Reset básico */
 * {
-  margin: 0; /* # Remove margens padrão */
-  padding: 0; /* # Remove espaçamentos padrão */
-  box-sizing: border-box; /* # Inclui bordas e padding no cálculo do tamanho */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #000; /* # Cor de fundo preta */
-  color: #fff; /* # Texto branco por padrão */
-  font-family: 'Prompt', sans-serif; /* # Fonte padrão */
-  min-height: 100vh; /* # Garante altura mínima de 100% da tela */
+  background: #000;
+  color: #fff;
+  font-family: 'Prompt', sans-serif;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 header {
-  padding: 4rem 2rem; /* # Espaçamento interno do topo e laterais */
+  padding: 4rem 2rem;
   position: relative;
-  z-index: 2; /* # Fica acima do conteúdo se sobreposto */
+  z-index: 2;
 }
 
 nav a {
-  font-family: 'Outfit', sans-serif; /* # Fonte do menu */
-  font-size: 1.2rem; /* # Tamanho do texto */
-  font-weight: 300; /* # Peso leve */
-  color: #ccc; /* # Cor de texto acinzentada */
-  margin-left: 2rem; /* # Espaço entre os links */
-  text-decoration: none; /* # Remove sublinhado */
-  transition: color 0.3s ease, font-weight 0.3s ease; /* # Transição suave de cor e peso */
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ccc;
+  margin-left: 2rem;
+  text-decoration: none;
+  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 nav a.ativo {
-  color: #fff; /* # Cor branca para o link ativo */
-  font-weight: 600; /* # Peso mais forte */
+  color: #fff;
+  font-weight: 600;
 }
 
 nav a:hover,
 nav a:focus,
 nav a:active {
-  color: #fff; /* # Fica branco ao passar o mouse ou focar */
+  color: #fff;
 }
 
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center; /* # Centraliza horizontalmente */
-  justify-content: start; /* # Alinha o conteúdo no topo */
-  text-align: center; /* # Centraliza texto */
-  padding: 6rem 2rem 2rem; /* # Aumentado topo para subir o conteúdo geral */
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  padding: 6rem 2rem 2rem;
   position: relative;
   z-index: 1;
   color: #fff;
@@ -55,22 +56,130 @@ main {
 }
 
 h1 {
-  font-family: 'Prompt', sans-serif; /* # Fonte principal */
-  font-size: 5rem; /* # Tamanho grande do título */
-  font-weight: 600; /* # Peso forte */
-  line-height: 1.2; /* # Altura da linha */
+  font-family: 'Prompt', sans-serif;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 p {
-  margin-top: 1.5rem; /* # Espaço entre título e parágrafo */
-  font-size: 1.4rem; /* # Tamanho do texto */
-  font-weight: 300; /* # Peso leve */
-  color: #ccc; /* # Cor acinzentada */
-  max-width: 800px; /* # Limita largura do texto */
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #ccc;
+  max-width: 800px;
 }
 
 .arrow {
-  margin-top: 2.5rem; /* # Espaço acima da seta */
-  font-size: 2rem; /* # Tamanho da seta */
-  opacity: 0.5; /* # Transparência */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 2.5rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.arrow:hover,
+.arrow:focus {
+  opacity: 1;
+}
+
+#portfolio {
+  padding: 4rem 2rem 6rem;
+  background: #111;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.image-slot {
+  background: #222;
+  border: 2px dashed #555;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.image-slot:hover {
+  border-color: #fff;
+}
+
+.image-slot img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.bottom-images {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.bottom-image-slot {
+  width: 48%;
+  height: 250px;
+  background: #222;
+  border-radius: 10px;
+  border: 2px solid #555;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.bottom-image-slot:hover {
+  border-color: #fff;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+  user-select: none;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.modal-content.zoomed {
+  transform: scale(2);
+  cursor: zoom-out;
 }
