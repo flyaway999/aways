@@ -1,0 +1,76 @@
+* {
+  margin: 0; /* # Remove margens padrão */
+  padding: 0; /* # Remove espaçamentos padrão */
+  box-sizing: border-box; /* # Inclui bordas e padding no cálculo do tamanho */
+}
+
+body {
+  background: #000; /* # Cor de fundo preta */
+  color: #fff; /* # Texto branco por padrão */
+  font-family: 'Prompt', sans-serif; /* # Fonte padrão */
+  min-height: 100vh; /* # Garante altura mínima de 100% da tela */
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 4rem 2rem; /* # Espaçamento interno do topo e laterais */
+  position: relative;
+  z-index: 2; /* # Fica acima do conteúdo se sobreposto */
+}
+
+nav a {
+  font-family: 'Outfit', sans-serif; /* # Fonte do menu */
+  font-size: 1.2rem; /* # Tamanho do texto */
+  font-weight: 300; /* # Peso leve */
+  color: #ccc; /* # Cor de texto acinzentada */
+  margin-left: 2rem; /* # Espaço entre os links */
+  text-decoration: none; /* # Remove sublinhado */
+  transition: color 0.3s ease, font-weight 0.3s ease; /* # Transição suave de cor e peso */
+}
+
+nav a.ativo {
+  color: #fff; /* # Cor branca para o link ativo */
+  font-weight: 600; /* # Peso mais forte */
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+  color: #fff; /* # Fica branco ao passar o mouse ou focar */
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* # Centraliza horizontalmente */
+  justify-content: start; /* # Alinha o conteúdo no topo */
+  text-align: center; /* # Centraliza texto */
+  padding: 6rem 2rem 2rem; /* # Aumentado topo para subir o conteúdo geral */
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'Prompt', sans-serif; /* # Fonte principal */
+  font-size: 5rem; /* # Tamanho grande do título */
+  font-weight: 600; /* # Peso forte */
+  line-height: 1.2; /* # Altura da linha */
+}
+
+p {
+  margin-top: 1.5rem; /* # Espaço entre título e parágrafo */
+  font-size: 1.4rem; /* # Tamanho do texto */
+  font-weight: 300; /* # Peso leve */
+  color: #ccc; /* # Cor acinzentada */
+  max-width: 800px; /* # Limita largura do texto */
+}
+
+.arrow {
+  margin-top: 2.5rem; /* # Espaço acima da seta */
+  font-size: 2rem; /* # Tamanho da seta */
+  opacity: 0.5; /* # Transparência */
+}

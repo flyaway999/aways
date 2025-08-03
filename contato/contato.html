@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato - Flyaway</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Prompt', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 4rem 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    nav a {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #ccc;
+      margin-left: 2rem;
+      text-decoration: none;
+      transition: color 0.3s ease, font-weight 0.3s ease;
+    }
+
+    nav a.ativo {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    nav a:focus,
+    nav a:active {
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-family: 'Prompt', sans-serif;
+      font-size: 5rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: #ccc;
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="../home/index.html">WORK</a>
+      <a href="#" class="ativo">CONTATO</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contato</h1>
+    <p>Me chame via e-mail, Discord ou Instagram</p>
+  </main>
+</body>
+</html>
