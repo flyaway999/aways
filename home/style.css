@@ -65,17 +65,22 @@ p {
 
 
 .arrow {
-  background: transparent;
-  border: none;
-  margin-top: 3rem;
+  width: 30px;
+  height: 30px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(-45deg); /* seta apontando para baixo */
+  margin: 0 auto;
   cursor: pointer;
-  opacity: 0.7;
-  transition: 2s;
+  transition: opacity 0.3s ease;
 }
 
 .arrow:hover {
-  opacity: 1;
+  opacity: 0.7;
 }
+
+
+
 
 /* PORTFÓLIO GRID */
 #portfolio {
@@ -103,4 +108,8 @@ p {
   object-fit: cover;
   display: block;
   border: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
