@@ -95,3 +95,12 @@ p {
   background-color: #fff;
   color: #000;
 }
+
+body {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+body.fade-in {
+  opacity: 1;
+}
