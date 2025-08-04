@@ -27,4 +27,42 @@
     </div>
   </main>
 </body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Fade in ao carregar
+    document.body.classList.add('fade-in');
+
+    // Adiciona fade out nos links internos
+    const links = document.querySelectorAll('a[href]');
+
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+
+      // Ignora âncoras, emails, links externos e links com target="_blank"
+      if (
+        href.startsWith('#') ||
+        href.startsWith('mailto:') ||
+        link.target === '_blank' ||
+        href.startsWith('http')
+      ) return;
+
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const url = link.href;
+
+        // Aplica fade out
+        document.body.classList.remove('fade-in');
+        document.body.style.opacity = 0;
+
+        // Espera a transição e vai pra próxima página
+        setTimeout(() => {
+          window.location.href = url;
+        }, 600); // mesmo tempo do transition
+      });
+    });
+  });
+</script>
+
+
 </html>
