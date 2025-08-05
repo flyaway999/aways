@@ -122,13 +122,3 @@ body {
 body.fade-in {
   opacity: 1;
 }
-
-.site-footer {
-  text-align: center;
-  padding: 1em 0;
-  background-color: #000000;
-  color: #eee;
-  font-size: 0.9em;
-  font-family: 'Prompt', sans-serif;
-  margin-top: 2em;
-}
