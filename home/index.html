@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -24,35 +27,51 @@
     <p>18 ANOS. VFX EDITOR. TRABALHEI COM: TWITCHBR, C6BANK, GAULES, CROSS, ALANZOKA E MAIS.</p>
 
     <div class="arrow" onclick="scrollToPortfolio()"></div>
-    </button>
   </main>
 
   <section id="portfolio">
     <div class="grid-container">
-      <div class="grid-item"><img src="../imgs/img1.jpg" alt="Imagem 1" /></div>
-      <div class="grid-item"><img src="../imgs/img2.jpg" alt="Imagem 2" /></div>
-      <div class="grid-item"><img src="../imgs/img3.jpg" alt="Imagem 3" /></div>
-      <div class="grid-item"><img src="../imgs/img4.jpg" alt="Imagem 4" /></div>
+      <div class="grid-item">
+        <a href="../imgs/img1.jpg" data-lightbox="portfolio" data-title="Imagem 1">
+          <img src="../imgs/img1.jpg" alt="Imagem 1" />
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="../imgs/img2.jpg" data-lightbox="portfolio" data-title="Imagem 2">
+          <img src="../imgs/img2.jpg" alt="Imagem 2" />
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="../imgs/img3.jpg" data-lightbox="portfolio" data-title="Imagem 3">
+          <img src="../imgs/img3.jpg" alt="Imagem 3" />
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="../imgs/img4.jpg" data-lightbox="portfolio" data-title="Imagem 4">
+          <img src="../imgs/img4.jpg" alt="Imagem 4" />
+        </a>
+      </div>
     </div>
   </section>
 
   <script>
     function scrollToPortfolio() {
-  document.getElementById('portfolio').scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',   // alinhamento no topo da seção
-    inline: 'nearest' // padrão
-  });
-}
+      document.getElementById('portfolio').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+      });
+    }
 
-  window.addEventListener('DOMContentLoaded', () => {
-    requestAnimationFrame(() => {
-      document.body.classList.add('fade-in');
+    window.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => {
+        document.body.classList.add('fade-in');
+      });
     });
-  });
-
-
   </script>
+
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 </body>
 </html>
