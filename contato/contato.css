@@ -79,8 +79,9 @@ p {
 
 .buttons a {
   text-decoration: none;
+  background-color: #1a1919;
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid #000000;
   padding: 1rem 2rem;
   font-family: 'Outfit', sans-serif;
   font-size: 1rem;
