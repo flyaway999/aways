@@ -9,6 +9,12 @@ body {
   background: #000;
   color: #fff;
   font-family: 'Prompt', sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+body.fade-in {
+  opacity: 1;
 }
 
 /* HEADER */
@@ -63,7 +69,7 @@ p {
   max-width: 800px;
 }
 
-
+/* SETA */
 .arrow {
   width: 30px;
   height: 30px;
@@ -79,9 +85,6 @@ p {
   opacity: 0.6;
 }
 
-
-
-
 /* PORTFÓLIO GRID */
 #portfolio {
   padding: 4rem 2rem 6rem;
@@ -96,29 +99,47 @@ p {
   margin: 0 auto;
 }
 
+/* Item da grade do portfólio */
 .grid-item {
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
+  position: relative; /* necessário para o efeito escurecido opcional */
+  cursor: pointer;
 }
 
+/* Imagem da arte */
 .grid-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   border: none;
+  transition: transform 0.4s ease; /* transição suave para o zoom */
 }
 
+/* Hover da imagem - zoom leve */
+.grid-item:hover img {
+  transform: scale(1.05); /* aumenta levemente a imagem no hover */
+}
+
+/* Efeito opcional: escurece a imagem ao passar o mouse */
+.grid-item::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* sem cor inicialmente */
+  transition: background 0.4s ease;
+  pointer-events: none;
+}
+
+.grid-item:hover::after {
+  background: rgba(0, 0, 0, 0.15); /* escurecimento sutil no hover */
+}
+
+/* SCROLL SUAVE */
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
-}
-
-body.fade-in {
-  opacity: 1;
 }
