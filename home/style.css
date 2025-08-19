@@ -17,7 +17,7 @@ body.fade-in {
   opacity: 1;
 }
 
-/* HEADER */
+
 header {
   padding: 4rem 2rem;
   position: relative;
@@ -44,7 +44,7 @@ header {
   color: #fff;
 }
 
-/* MAIN */
+
 main {
   min-height: 100vh;
   padding: 6rem 2rem 2rem;
@@ -58,7 +58,7 @@ main {
 h1 {
   font-size: 5rem;
   font-weight: 600;
-  margin-top: -21rem; /* sobe o título */
+  margin-top: -21rem;
 }
 
 p {
@@ -69,7 +69,7 @@ p {
   max-width: 800px;
 }
 
-/* SETA */
+
 .arrow {
   width: 30px;
   height: 30px;
