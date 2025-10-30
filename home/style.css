@@ -146,7 +146,7 @@ html {
 
 /* SEÇÕES */
 section {
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
@@ -284,7 +284,7 @@ a:hover {
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, #6e0ff5, #00d4ff);
+  background: linear-gradient(135deg, #0b72bc, #637bcb);
   border-radius: 8px;
   text-decoration: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
