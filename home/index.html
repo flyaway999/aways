@@ -15,6 +15,7 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <nav>
       <a href="index.html" class="nav-link ativo">WORK</a>
@@ -22,20 +23,65 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <main>
-    <h1>Prazer, FIyaway</h1>
-    <p>18 ANOS. VFX EDITOR. CRIO EDIÇÕES DINÂMICAS PARA GAMEPLAYS, AMVS E CONTEÚDO DIGITAL.</p>
-
+    <h1>Hi. I'm, Flyaway</h1>
+    <p>18. VFX EDITOR. I CREATE DYNAMIC AND MOTION EDITS FOR GAMEPLAY, AMVS and DIGITAL CONTENT.</p>
     <div class="arrow" onclick="scrollToPortfolio()"></div>
   </main>
 
+  <!-- SEÇÃO DESIGN -->
+  <section id="design">
+    <h2>Design projects</h2>
+    <div class="grid-container">
+      <div class="grid-item"><img src="../imgs/design1.jpg" alt="Design 1"></div>
+      <div class="grid-item"><img src="../imgs/design2.jpg" alt="Design 2"></div>
+      <div class="grid-item"><img src="../imgs/design3.jpg" alt="Design 3"></div>
+      <div class="grid-item"><img src="../imgs/design4.jpg" alt="Design 4"></div>
+    </div>
+  </section>
 
- <!-- FALTA COISAS AQ BB.. -->
+  <!-- SEÇÃO EDIÇÕES -->
+  <section id="edicoes">
+    <h2>Editions</h2>
+    <div class="grid-container">
+      <div class="grid-item">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/o6fXrkzKNkE?si=4jxTWkPWrrNiehU-" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="grid-item">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qZ30_tsZGnQ?si=nPtIt2pbSQEwwuYi" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="grid-item">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SEU_VIDEO_3" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="grid-item">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SEU_VIDEO_4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 
+  <!-- SEÇÃO SOBRE MIM -->
+  <section id="sobre">
+    <h2>About Me</h2>
+    <div class="sobre-container">
+      <img src="./imgs/foto.jpg" alt="Flyaway">
+      <p>My name is Thiago and I'm 18 years old. I'm passionate about motion design and VFX editing; anything involving cinema or aesthetics interests me and I find it super interesting. I'm always willing to learn more; art is my passion.</p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO CONTATO -->
+  <section id="contato">
+    <h2>Contact</h2>
+    <p>Get in touch with us through the networks below or contact us at @999flyaway</p>
+    <div class="contato-botoes">
+      <a href="https://discord.gg/Hhnbx3uTg4" target="_blank" class="btn">Discord</a>
+      <a href="https://www.behance.net/flyaway999" target="_blank" class="btn">Behance</a>
+    </div>
+  </section>
 
   <script>
     function scrollToPortfolio() {
-      document.getElementById('portfolio').scrollIntoView({
+      document.getElementById('design').scrollIntoView({
         behavior: 'smooth',
         block: 'start',
         inline: 'nearest'
