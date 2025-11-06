@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -62,7 +61,7 @@ h1 {
 }
 
 p {
-  margin-top: 0.5rem; /* menos espaço entre o título e o parágrafo */
+  margin-top: 0.5rem; 
   font-size: 1.4rem;
   font-weight: 300;
   color: #ccc;
@@ -75,7 +74,7 @@ p {
   height: 30px;
   border-left: 3px solid white;
   border-bottom: 3px solid white;
-  transform: rotate(-45deg); /* seta apontando para baixo */
+  transform: rotate(-45deg);
   margin: 0 auto;
   cursor: pointer;
   transition: opacity 0.3s ease;
@@ -85,7 +84,6 @@ p {
   opacity: 0.6;
 }
 
-/* PORTFÓLIO GRID */
 #portfolio {
   padding: 4rem 2rem 6rem;
   margin-top: -6rem;
@@ -99,52 +97,46 @@ p {
   margin: 0 auto;
 }
 
-/* Item da grade do portfólio */
 .grid-item {
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  position: relative; /* necessário para o efeito escurecido opcional */
+  position: relative; 
   cursor: pointer;
 }
 
-/* Imagem da arte */
 .grid-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   border: none;
-  transition: transform 0.4s ease; /* transição suave para o zoom */
+  transition: transform 0.4s ease;
 }
 
-/* Hover da imagem - zoom leve */
 .grid-item:hover img {
-  transform: scale(1.05); /* aumenta levemente a imagem no hover */
+  transform: scale(1.05); 
 }
 
-/* Efeito opcional: escurece a imagem ao passar o mouse */
 .grid-item::after {
   content: '';
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0); /* sem cor inicialmente */
+  background: rgba(0, 0, 0, 0); 
   transition: background 0.4s ease;
   pointer-events: none;
 }
 
 .grid-item:hover::after {
-  background: rgba(0, 0, 0, 0.15); /* escurecimento sutil no hover */
+  background: rgba(0, 0, 0, 0.15); 
 }
 
-/* SCROLL SUAVE */
 html {
   scroll-behavior: smooth;
 }
 
-/* SEÇÕES */
 section {
   padding: 4rem 2rem;
   text-align: center;
@@ -157,7 +149,6 @@ section h2 {
   color: #fff;
 }
 
-/* GRID */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -188,7 +179,6 @@ section h2 {
   transform: scale(1.05);
 }
 
-/* SOBRE MIM */
 .sobre-container {
   display: flex;
   flex-direction: column;
@@ -210,7 +200,6 @@ section h2 {
   color: #ccc;
 }
 
-/* LINKS */
 a {
   color: #fff;
   text-decoration: underline;
@@ -255,7 +244,6 @@ a:hover {
   opacity: 0.85;
 }
 
-/* CENTRALIZAÇÃO DE TODA A SEÇÃO CONTATO */
 #contato {
   text-align: center;
   padding: 6rem 2rem;
@@ -295,10 +283,9 @@ a:hover {
   opacity: 0.85;
 }
 
-/* SHORT VIDEOS - formato vertical */
 #shorts .grid-item {
-  aspect-ratio: 9 / 16; /* formato vertical */
-  max-width: 350px;     /* limita a largura pra não ficar gigante */
+  aspect-ratio: 9 / 16; 
+  max-width: 350px;     
   margin: 0 auto;
 }
 
