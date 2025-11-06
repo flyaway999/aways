@@ -294,3 +294,16 @@ a:hover {
   transform: translateY(-3px);
   opacity: 0.85;
 }
+
+/* SHORT VIDEOS - formato vertical */
+#shorts .grid-item {
+  aspect-ratio: 9 / 16; /* formato vertical */
+  max-width: 350px;     /* limita a largura pra não ficar gigante */
+  margin: 0 auto;
+}
+
+#shorts .grid-container {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsivo */
+  gap: 1.5rem;
+  justify-items: center;
+}

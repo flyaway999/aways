@@ -30,20 +30,28 @@
     <div class="arrow" onclick="scrollToPortfolio()"></div>
   </main>
 
-  <!-- SEÇÃO DESIGN -->
-  <section id="design">
-    <h2>Design projects</h2>
+  <!-- SEÇÃO SHORT VIDEOS -->
+  <section id="shorts">
+    <h2>Short Videos</h2>
     <div class="grid-container">
-      <div class="grid-item"><img src="./imgs/design1.jpg" alt="Design 1"></div>
-      <div class="grid-item"><img src="./imgs/design2.jpg" alt="Design 2"></div>
-      <div class="grid-item"><img src="./imgs/design3.jpg" alt="Design 3"></div>
-      <div class="grid-item"><img src="./imgs/design4.jpg" alt="Design 4"></div>
+      <div class="grid-item">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="grid-item">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="grid-item">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="grid-item">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
   </section>
 
   <!-- SEÇÃO EDIÇÕES -->
   <section id="edicoes">
-    <h2>Editions</h2>
+    <h2>Long Videos</h2>
     <div class="grid-container">
       <div class="grid-item">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/o6fXrkzKNkE?si=4jxTWkPWrrNiehU-" frameborder="0" allowfullscreen></iframe>
@@ -81,7 +89,7 @@
 
   <script>
     function scrollToPortfolio() {
-      document.getElementById('design').scrollIntoView({
+      document.getElementById('shorts').scrollIntoView({
         behavior: 'smooth',
         block: 'start',
         inline: 'nearest'

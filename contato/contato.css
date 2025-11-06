@@ -107,3 +107,21 @@ body {
 body.fade-in {
   opacity: 1;
 }
+
+/* EMAIL */
+.email {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.email a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.email a:hover {
+  opacity: 0.7;
+}
