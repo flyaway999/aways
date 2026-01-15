@@ -294,3 +294,23 @@ a:hover {
   gap: 1.5rem;
   justify-items: center;
 }
+
+#why {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+#why h2 {
+  font-weight: 600; /* igual Shorts */
+  margin-bottom: 2rem;
+}
+
+.single-video {
+  display: flex;
+  justify-content: center;
+}
+
+.single-video .grid-item {
+  width: 320px;       /* padrão short */
+  aspect-ratio: 9/16;
+}
